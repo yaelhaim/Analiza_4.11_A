@@ -11,3 +11,13 @@
 const http = require("http");
 
 // write your code here
+
+const server = http.createServer((req, res) => {
+    console.log("Method:", req.method);
+    console.log("URL:", req.url);
+    console.log("HTTP Version:", req.httpVersion);
+
+    res.end("Request received!");
+});
+
+server.listen(3000);

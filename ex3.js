@@ -6,3 +6,9 @@
 const http = require("http");
 
 // write your code here
+const server = http.createServer((req, res) => {
+    const headers = JSON.stringify(req.headers);
+    res.end(headers);
+});
+
+server.listen(3000);
